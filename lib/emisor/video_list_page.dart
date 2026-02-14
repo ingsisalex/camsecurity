@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'dart:io';
 import 'package:path_provider/path_provider.dart';
-import 'package:intl/intl.dart'; // Asegúrate de tener intl en tu pubspec.yaml
+import 'package:intl/intl.dart';
 import '../ui/widgets/glass_card.dart';
+import '../ui/widgets/video_player_widget.dart'; // Importación del nuevo widget
 
 class VideoListPage extends StatefulWidget {
   const VideoListPage({super.key});
@@ -108,9 +109,12 @@ class _VideoListPageState extends State<VideoListPage> {
                             onPressed: () => _deleteVideo(file),
                           ),
                           onTap: () {
-                            // Aquí integraremos el reproductor en el siguiente paso
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(content: Text("REPRODUCIENDO: ${file.path.split('/').last}")),
+                            // Ahora navegamos al reproductor real
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => VideoPlayerWidget(videoFile: file),
+                              ),
                             );
                           },
                         ),
