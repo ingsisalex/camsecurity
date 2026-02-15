@@ -22,8 +22,8 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
-          # Actualizamos a la 3.22.2 para soportar las librerías modernas
-          flutter-version: '3.22.2'
+          # Usamos la 3.27.0 para asegurar compatibilidad total con mobile_scanner y demás
+          flutter-version: '3.27.0'
 
       - name: Get dependencies
         run: flutter pub get
