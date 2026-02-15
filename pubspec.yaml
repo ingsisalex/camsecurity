@@ -4,7 +4,6 @@ publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  # Bajamos de 3.10.7 a 3.1.0 para que coincida con el servidor de GitHub
   sdk: ^3.1.0
 
 dependencies:
@@ -32,7 +31,8 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_launcher_icons: ^0.13.1
-  flutter_lints: ^6.0.0
+  # Bajamos de ^6.0.0 a ^2.0.0 para que sea compatible con Dart 3.1.0
+  flutter_lints: ^2.0.0
 
 flutter:
   uses-material-design: true
