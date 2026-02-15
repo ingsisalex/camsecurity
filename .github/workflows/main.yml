@@ -22,8 +22,8 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
-          # Subimos a la 3.13.0 para que el SDK de Dart sea compatible con tu pubspec
-          flutter-version: '3.13.0'
+          # Actualizamos a la 3.22.2 para soportar las librerías modernas
+          flutter-version: '3.22.2'
 
       - name: Get dependencies
         run: flutter pub get
